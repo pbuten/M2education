@@ -3,7 +3,17 @@
     <preference for="Buten\Sample\Api\Data\ProductTypesInterface" type="Buten\Sample\Model\ProductTypes"/>
     <preference for="Buten\Sample\Api\ProductTypesRepositoryInterface" type="Buten\Sample\Model\ProductTypesRepository"/>
     <preference for="Buten\Sample\Api\ProductTypesSearchResultInterface" type="Buten\Sample\Model\ProductTypesSearchResult"/>
-    <type name="Magento\Catalog\Pricing\Render\FinalPriceBox">
-        <plugin name="price_hide" type="Buten\Sample\Plugin\HidePrice" sortOrder="1" disabled="false"/>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="buten_sample_types_listing_data_source" xsi:type="string">Buten\Sample\Model\ResourceModel\ProductTypes\Grid\Collection</item>
+            </argument>
+        </arguments>
     </type>
+    <virtualType name="Buten\Sample\Model\ResourceModel\ProductTypes\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">buten_product_types</argument>
+            <argument name="resourceModel" xsi:type="string">Buten\Sample\Model\ResourceModel\ProductTypes\Collection</argument>
+        </arguments>
+    </virtualType>
 </config>
