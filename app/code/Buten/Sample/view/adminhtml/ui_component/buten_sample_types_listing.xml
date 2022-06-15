@@ -6,6 +6,13 @@
         </item>
     </argument>
     <settings>
+        <buttons>
+            <button name="add">
+                <url path="*/*/new"/>
+                <class>primary</class>
+                <label translate="true">Add New</label>
+            </button>
+        </buttons>
         <spinner>buten_sample_types_columns</spinner>
         <deps>
             <dep>buten_sample_types_listing.buten_sample_types_listing_data_source</dep>
@@ -51,5 +58,10 @@
                 <label translate="true">type</label>
             </settings>
         </column>
+        <actionsColumn name="actions" class="Buten\Sample\Ui\Component\Listing\Columns\ProductTypeActions" sortOrder="200">
+            <settings>
+                <indexField>entity_id</indexField>
+            </settings>
+        </actionsColumn>
     </columns>
 </listing>

@@ -10,7 +10,7 @@ namespace Buten\Sample\Api\Data;
  */
 interface ProductTypesInterface
 {
-    const ID = 'entitty_id';
+    const ID = 'entity_id';
     const TYPE = 'type';
 
     /**

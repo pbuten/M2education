@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-namespace Buten\Sample\Controller\Adminhtml\Post;
+namespace Buten\Sample\Controller\Adminhtml\ProductTypes;
 
 
 use Magento\Backend\App\Action;
@@ -10,10 +10,14 @@ use Magento\Framework\View\Result\PageFactory;
 
 /**
  * Class Types
- * @package Buten\Sample\Controller\Adminhtml\Post
+ * @package Buten\Sample\Controller\Adminhtml\ProductTypes
  */
 class Types extends Action
 {
+    /**
+     * @see _isAlloved()
+     */
+    const ADMIN_RESOURCE = 'Magento_Catalog::catalog';
     protected $resultPageFactory;
 
     /**
@@ -36,6 +40,8 @@ class Types extends Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
+        $resultPage->setActiveMenu('Buten_Sample::sample')
+            ->addBreadcrumb(__('Edit Product Type'), __('Product Type'));
         $resultPage->getConfig()->getTitle()->prepend(__('Product Types'));
         return $resultPage;
     }

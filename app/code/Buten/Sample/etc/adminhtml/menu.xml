@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
         <add id="Buten_Sample::sample" title="Sample" module="Buten_Sample" sortOrder="51" resource="Magento_Catalog::catalog"/>
-        <add id="Buten_Sample::types" title="Manage Product Types" module="Buten_Sample" sortOrder="10" action="buten/post/types" resource="Magento_Catalog::catalog" parent="Buten_Sample::sample"/>
+        <add id="Buten_Sample::types" title="Manage Product Types" module="Buten_Sample" sortOrder="10" action="buten/producttypes/types" resource="Magento_Catalog::catalog" parent="Buten_Sample::sample"/>
         <add id="Buten_Sample::sample_configuration" title="Configuration" module="Buten_Sample" sortOrder="99" parent="Buten_Sample::sample" action="adminhtml/system_config/edit/section/sample" resource="Magento_Catalog::catalog"/>
     </menu>
 </config>
