@@ -14,9 +14,11 @@ use Magento\Framework\Controller\ResultInterface;
 class NewAction extends Action
 {
     /**
-     * @see _isAlloved()
+     * Authorization level of a basic admin session
+     *
+     * @see _isAllowed()
      */
-    const ADMIN_RESOURCE = 'Magento_Catalog::catalog';
+    const ADMIN_RESOURCE = 'Magento_Catalog::products';
     private ProductTypesRepository $productTypesRepository;
 
     public function __construct(
@@ -32,7 +34,7 @@ class NewAction extends Action
     {
         /** @var Page $result */
         $result = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
-        $result->setActiveMenu('AdvancedCoder_ProductTypes::advanced_coder')
+        $result->setActiveMenu('Buten_Sample::sample')
             ->addBreadcrumb(__('New Product Type'), __('Product Type'));
         $result->getConfig()->getTitle()->prepend(__('New Product Type'));
 

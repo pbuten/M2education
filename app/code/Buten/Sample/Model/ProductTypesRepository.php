@@ -11,6 +11,7 @@ use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Api\SearchCriteriaInterface;
 use Buten\Sample\Api\ProductTypesSearchResultInterfaceFactory;
 use Buten\Sample\Model\ProductTypesFactory;
+use Magento\Framework\Exception\StateException;
 
 class ProductTypesRepository implements ProductTypesRepositoryInterface
 {
@@ -46,7 +47,7 @@ class ProductTypesRepository implements ProductTypesRepositoryInterface
     {
         $object = $this->productTypesFactory->create();
         $this->productTypesResource->load($object, $id);
-        if (! $object->getId()) {
+        if (!$object->getId()) {
             throw new NoSuchEntityException(__('Unable to find entity with ID "%1"', $id));
         }
         return $object;

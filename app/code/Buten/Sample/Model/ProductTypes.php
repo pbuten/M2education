@@ -13,6 +13,10 @@ use Magento\Framework\Model\AbstractModel;
  */
 class ProductTypes extends AbstractModel implements ProductTypesInterface
 {
+    protected function _construct()
+    {
+        parent::_init('Buten\Sample\Model\ResourceModel\ProductTypes');
+    }
 
     /**
      * @return string
@@ -28,5 +32,15 @@ class ProductTypes extends AbstractModel implements ProductTypesInterface
     public function setType(string $type): void
     {
         $this->setData(ProductTypesInterface::TYPE, $type);
+    }
+
+    public function getId()
+    {
+        return $this->_getData('entity_id');
+    }
+
+    public function setId($value)
+    {
+        return $this->setData('entity_id', $value);
     }
 }

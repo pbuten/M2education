@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Buten\Sample\Controller\Adminhtml\ProductTypes;
-
 
 use Buten\Sample\Api\Data\ProductTypesInterface;
 use Buten\Sample\Api\ProductTypesRepositoryInterface;
@@ -10,9 +8,10 @@ use Buten\Sample\Model\ProductTypesFactory;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\App\Action\HttpPostActionInterface;
-use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Controller\Result\Redirect;
 use Magento\Framework\Controller\ResultInterface;
+use Magento\InventoryApi\Api\Data\SourceInterface;
+
 
 class Save extends Action implements HttpPostActionInterface
 {

@@ -9,18 +9,21 @@ use Buten\Sample\Model\ProductTypesRepository;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Backend\Model\View\Result\Page;
+use Magento\Framework\App\Action\HttpGetActionInterface as HttpGetActionInterface;
 use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Controller\Result\Redirect;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
 
-class Edit extends Action
+class Edit extends Action implements HttpGetActionInterface
 {
     /**
-     * @see _isAlloved()
+     * Authorization level of a basic admin session
+     *
+     * @see _isAllowed()
      */
-    const ADMIN_RESOURCE = 'Magento_Catalog::catalog';
+    const ADMIN_RESOURCE = 'Magento_Catalog::products';
     private ProductTypesRepository $productTypesRepository;
     public function __construct(
         Context $context,
@@ -30,16 +33,19 @@ class Edit extends Action
         $this->productTypesRepository = $productTypesRepository;
     }
 
+    /**
+     * @return ResultInterface
+     */
     public function execute(): ResultInterface
     {
-        $id = $this->getRequest()->getParam('id');
+        $id = (int) $this->getRequest()->getParam('id');
         try {
             $type = $this->productTypesRepository->get($id);
 
             /** @var Page $result */
             $result = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
-//            $result->setActiveMenu('Buten_Sample::sample')
-//                ->addBreadcrumb(__('Edit Product Type'), __('Product Type'));
+            $result->setActiveMenu('Buten_Sample::sample')
+                ->addBreadcrumb(__('Edit Product Type'), __('Product Type'));
             $result->getConfig()
                 ->getTitle()
                 ->prepend(__('Edit Product Type: %type', ['type' => $type->getType()]));

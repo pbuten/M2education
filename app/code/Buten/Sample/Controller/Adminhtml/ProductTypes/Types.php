@@ -15,9 +15,11 @@ use Magento\Framework\View\Result\PageFactory;
 class Types extends Action
 {
     /**
-     * @see _isAlloved()
+     * Authorization level of a basic admin session
+     *
+     * @see _isAllowed()
      */
-    const ADMIN_RESOURCE = 'Magento_Catalog::catalog';
+    const ADMIN_RESOURCE = 'Magento_Catalog::products';
     protected $resultPageFactory;
 
     /**

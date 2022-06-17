@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+//declare(strict_types=1);
 
 namespace Buten\Sample\Api\Data;
 
@@ -22,4 +22,5 @@ interface ProductTypesInterface
      * @param string $type
      */
     public function setType(string $type): void;
+
 }
