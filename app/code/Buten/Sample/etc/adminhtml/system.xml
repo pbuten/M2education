@@ -5,7 +5,7 @@
         <section id="sample" translate="label" type="text" sortOrder="1150" showInDefault="1" showInWebsite="1">
             <label>Sample</label>
             <tab>general</tab>
-            <resource>Buten_Sample::sample_config</resource>
+            <resource>Buten_Sample::product_types</resource>
             <group id="general" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1">
                 <label>General Configuration</label>
                 <comment><![CDATA[This is an education module. Please use it for your own risk only.]]></comment>

@@ -19,7 +19,7 @@ class Types extends Action
      *
      * @see _isAllowed()
      */
-    const ADMIN_RESOURCE = 'Magento_Catalog::products';
+    const ADMIN_RESOURCE = 'Buten_Sample::product_types';
     protected $resultPageFactory;
 
     /**

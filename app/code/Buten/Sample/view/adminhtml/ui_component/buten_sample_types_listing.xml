@@ -22,7 +22,7 @@
         <settings>
             <updateUrl path="mui/index/render"/>
         </settings>
-        <aclResource>Magento_Catalog::catalog</aclResource>
+        <aclResource>Buten_Sample::product_types</aclResource>
         <dataProvider name="buten_sample_types_listing_data_source" class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
             <settings>
                 <requestFieldName>id</requestFieldName>
