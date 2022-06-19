@@ -1,0 +1,12 @@
+{
+    "buten_product_types": {
+        "column": {
+            "entity_id": true,
+            "type": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "BUTEN_PRODUCT_TYPES_TYPE": true
+        }
+    }
+}
