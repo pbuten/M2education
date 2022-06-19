@@ -11,4 +11,8 @@
             <column name="type"/>
         </constraint>
     </table>
+
+    <table name="catalog_product_entity">
+        <column xsi:type="int" name="product_type_id" nullable="true" comment="Product Type"/>
+    </table>
 </schema>
