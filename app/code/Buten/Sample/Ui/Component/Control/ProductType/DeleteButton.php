@@ -2,7 +2,6 @@
 
 namespace Buten\Sample\Ui\Component\Control\ProductType;
 
-use Buten\Sample\Ui\Component\Control\ProductType\GenericButton;
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 
 class DeleteButton extends GenericButton implements ButtonProviderInterface

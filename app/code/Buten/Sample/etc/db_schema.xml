@@ -15,4 +15,8 @@
     <table name="catalog_product_entity">
         <column xsi:type="int" name="product_type_id" nullable="true" comment="Product Type"/>
     </table>
+
+    <table name="inventory_source">
+        <column xsi:type="int" name="product_type_id" nullable="true" comment="Product Type"/>
+    </table>
 </schema>

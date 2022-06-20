@@ -5,7 +5,6 @@ namespace Buten\Sample\Ui\Component\Control\ProductType;
 use Buten\Sample\Model\ProductTypesRepository;
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\UrlInterface;
-use phpDocumentor\Reflection\Utils;
 
 class GenericButton
 {

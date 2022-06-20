@@ -8,5 +8,10 @@
             "PRIMARY": true,
             "BUTEN_PRODUCT_TYPES_TYPE": true
         }
+    },
+    "catalog_product_entity": {
+        "column": {
+            "product_type_id": true
+        }
     }
 }

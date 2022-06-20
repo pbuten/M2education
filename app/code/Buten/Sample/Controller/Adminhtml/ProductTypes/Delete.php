@@ -31,7 +31,7 @@ class Delete extends Action implements HttpPostActionInterface
 
         if(!$productTypeId) {
             $this->messageManager->addErrorMessage(__('Error.'));
-            return $resultRedirect->setPath('*/*/index');
+            return $resultRedirect->setPath('*/*/types');
         }
 
         try {
@@ -42,6 +42,6 @@ class Delete extends Action implements HttpPostActionInterface
             $this->messageManager->addErrorMessage(__('Cannot delete product type'));
         }
 
-        return $resultRedirect->setPath('*/*/index');
+        return $resultRedirect->setPath('*/*/types');
     }
 }
