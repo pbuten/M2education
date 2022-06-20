@@ -15,7 +15,7 @@
     <settings>
         <buttons>
             <button name="back">
-                <url path="*/*/index"/>
+                <url path="*/*/types"/>
                 <class>back</class>
                 <label translate="true">Back</label>
             </button>

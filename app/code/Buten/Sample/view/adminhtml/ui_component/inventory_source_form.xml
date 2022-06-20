@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="general">
+        <field name="product_type_id" formElement="select" sortOrder="40">
+            <settings>
+                <dataType>text</dataType>
+                <dataScope>extension_attributes.product_type_id</dataScope>
+                <label translate="true">Select Product Type</label>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Buten\Sample\Model\Source\ProductTypes"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+
+    </fieldset>
+</form>

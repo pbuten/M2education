@@ -2,7 +2,6 @@
 
 namespace Buten\Sample\Ui\Component\Control\ProductType;
 
-use Buten\Sample\Ui\Component\Control\ProductType\GenericButton;
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 
 class SaveButton extends GenericButton implements ButtonProviderInterface
@@ -17,6 +16,7 @@ class SaveButton extends GenericButton implements ButtonProviderInterface
                 'form-role' => 'save',
             ],
             'sort_order' => 20,
+            'on_click' => ''
         ];
     }
 }

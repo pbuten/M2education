@@ -66,7 +66,7 @@ class Save extends Action implements HttpPostActionInterface
     {
         if ($this->getRequest()->getParam('back')) {
             $resultRedirect->setPath(
-                '*/*/edit',
+                '*/*/types',
                 [
                     ProductTypesInterface::ID => $id,
                     '_current' => true,
@@ -80,7 +80,7 @@ class Save extends Action implements HttpPostActionInterface
                 ]
             );
         } else {
-            $resultRedirect->setPath('*/*/');
+            $resultRedirect->setPath('*/*/types');
         }
     }
 }
