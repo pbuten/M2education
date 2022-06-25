@@ -3,7 +3,7 @@
     <default>
         <sample>
             <general>
-                <enabled>Disabled</enabled>
+                <enabled>1</enabled>
             </general>
         </sample>
     </default>

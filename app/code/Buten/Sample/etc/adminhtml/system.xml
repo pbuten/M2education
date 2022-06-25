@@ -1,18 +1,21 @@
 <?xml version="1.0"?>
 
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <section id="sample" translate="label" type="text" sortOrder="1150" showInDefault="1" showInWebsite="1">
+        <tab id="buten" translate="label" sortOrder="200">
+            <label>Buten</label>
+        </tab>
+        <section id="buten" translate="label" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
             <label>Sample</label>
-            <tab>general</tab>
-            <resource>Buten_Sample::product_types</resource>
-            <group id="general" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1">
+            <tab>buten</tab>
+            <resource>Buten_Sample::configuration</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>General Configuration</label>
-                <comment><![CDATA[This is an education module. Please use it for your own risk only.]]></comment>
-                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1">
-                    <label>Module Enable</label>
-                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
-                    <backend_model>Magento\Analytics\Model\Config\Backend\Enabled</backend_model>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>
         </section>

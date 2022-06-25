@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="3columns"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block name="index.index" class="Buten\Page\Block\Index\Index" template="Buten_Page::index/index.phtml"/>
+            <block class="Magento\Catalog\Block\Widget\RecentlyViewed" name="recently_viewed"
+                   template="Magento_Catalog::product/widget/viewed/grid.phtml" after="-">
+                <arguments>
+                    <argument name="uiComponent" xsi:type="string">widget_recently_viewed</argument>
+                    <argument name="page_size" xsi:type="number">1</argument>
+                    <argument name="show_attributes" xsi:type="string">name,image,price</argument>
+                    <argument name="show_buttons" xsi:type="string">add_to_cart,add_to_compare,add_to_wishlist</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
